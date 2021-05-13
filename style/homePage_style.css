@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+body{
+    background-color: white;
+}
+#top_con{
+    background-image: url("https://images.unsplash.com/photo-1496372412473-e8548ffd82bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1475&q=80");
+    height: 600px;
+    
+}
+.welcome_text{
+    font-family: 'Fredoka One', cursive;
+    color: springgreen;
+}
+#sub_heading{
+    font-family: 'Dancing Script', cursive;
+    color: yellow;
+}
+#Explore{
+    font-family: 'Itim', cursive;
+    color: black;
+}
+.area{
+    border-radius: 8px;
+    
+}
+.all_area{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: 600;
+}
+.anywhere{
+    border-radius: 10px;
+}
+.anywhere_text{
+    color: black;
+    font-size: larger;
+    font-weight: 600;
+}
+#host{
+    background-image: url("https://images.unsplash.com/photo-1509023464722-18d996393ca8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    height: 350px;
+    border-radius: 20px;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+}
+#mainhost{
+    color: red;
+}
