@@ -25,12 +25,12 @@
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="/" class="nav-link px-2 text-light">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
                 </ul>
                 <div class="text-end">
                     {{!-- <button type="button" class="btn btn-outline-light">Become a Host</button> --}}
                     <button type="button" class="btn btn-outline-light">Login/Signup</button>
-                    <button type="button" class="btn btn-warning">Become A Host</button>
+                    <a href="/becomeHost"><button type="button" class="btn btn-warning">Become A Host</button></a>
                 </div>
             </div>
         </div>
@@ -52,36 +52,36 @@
                 <button>Register</button>
             </div>
             <div class="wrapper">
-                <form id="login" tabindex="500">
+                <form id="login" tabindex="500" action="/login" method="POST">
                     <h3>Login</h3>
                     <div class="mail">
-                        <input type="mail" name="">
+                        <input type="mail" name="email">
                         <label>Email</label>
                     </div>
                     <div class="passwd">
-                        <input type="password" name="">
+                        <input type="password" name="password">
                         <label>Password</label>
                     </div>
                     <div class="submit">
                         <button class="dark">Login</button>
                     </div>
                 </form>
-                <form id="register" tabindex="502">
-                    <h3>Register</h3>
+                <form id="register" tabindex="502" action="/signUp" method="POST">
+                    <h3>SignUp</h3>
                     <div class="name">
-                        <input type="text" name="">
+                        <input type="text" name="name">
                         <label>Full Name</label>
                     </div>
                     <div class="mail">
-                        <input type="mail" name="">
+                        <input type="mail" name="email">
                         <label>Email</label>
                     </div>
                     <div class="uid">
-                        <input type="text" name="">
+                        <input type="tel" name="mobile">
                         <label>Mobile Number</label>
                     </div>
                     <div class="passwd">
-                        <input type="password" name="">
+                        <input type="password" name="password">
                         <label>Password</label>
                     </div>
                     <div class="submit">

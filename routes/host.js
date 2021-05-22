@@ -1,15 +1,13 @@
 const express = require("express")
 const router = express.Router()
 
-
-router.get("/", (req, res) => {
+router.get("/becomeHost", (req, res) => {
     console.log("HomePage Started")
-    res.render("homePage")
+    res.render("hostWelcome")
 })
-
-router.get("/about", (req, res) => {
+router.get("/hostLogin", (req, res) => {
     console.log("HomePage Started")
-    res.render("about")
+    res.render("hostLoginSignup")
 })
 
 module.exports=router

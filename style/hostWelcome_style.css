@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+#main_timeline{
+    background-image: url("https://images.unsplash.com/photo-1613425350652-b1ae2b53b094?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
+    height: 500px;
+}
+.welcome_text{
+    color: white;
+    font-family: 'Fredoka One', cursive;
+}
+.sub_line{
+    font-family: 'Fredoka One', cursive;
+}
+#main_line{
+    color: crimson;
+}
+.sub_heading{
+    font-family: 'Dancing Script', cursive;
+    color: chartreuse;
+}
+.feedback{
+    border-radius: 50px;
+    height: 400px;
+}
+@media only screen and (min-width : 1200px) {
+    .carousel-caption
+    {
+      top: 35%;
+    }
+  }
+.support{
+    font-family: 'Fredoka One', cursive;
+}
+.spec{
+    font-family: 'Dancing Script', cursive;
+    color: black;
+    font-size: 60px;
+    
+}
+.register{
+    background-image: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    border-radius: 30px;
+    height: 500px;
+    color: white;
+}
+.final{
+    background-image: url("https://images.unsplash.com/photo-1438109382753-8368e7e1e7cf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    height: 500px;
+}
+
