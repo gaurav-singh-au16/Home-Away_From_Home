@@ -29,7 +29,7 @@
                 </ul>
                 <div class="text-end">
                     <!-- {{!-- <button type="button" class="btn btn-outline-light">Become a Host</button> --}} -->
-                    <button type="button" class="btn btn-warning">Logout</button>
+                    <a href="/logout"><button type="button" class="btn btn-warning">Logout</button></a>
                 </div>
             </div>
         </div>
@@ -81,8 +81,51 @@
             <!-- Main component for a primary marketing message or call to action -->
             <div class="jumbotron">
                 <h1>Add New Listing Page</h1>
-                {{!-- Write Your Logic --}}
-                <p><p>
+                <div class="container">
+                    <h1 class="text-center display-5">Become a Host</h1>
+                    <h1 class="text-center display-5">Add details</h1>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <form action="/addnew" method="POST" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">House Name</label>
+                                <input type="text" name="name" class="form-control" id="housename">
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Location</label>
+                                <input type="text" name="location" class="form-control" id="location">
+                                {{!-- <select onchange="print_city('state', this.selectedIndex);" id="sts" name="stt"
+                                    class="form-control" required></select>
+                                <select id="state" class="form-control" required></select> --}}
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Price</label>
+                                <input type="number" name="price" class="form-control" id="price">
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Available Amenities</label>
+                                <input type="text" name="amenities" class="form-control" id="amenities">
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Image of Room</label>
+                                <input type="file" name="imageRoom" class="form-control" id="imageRoom">
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Image of Washoom</label>
+                                <input type="file" name="imageWashroom" class="form-control" id="imageWashroom">
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Image from Outside of Room</label>
+                                <input type="file" name="imageOut" class="form-control" id="imageOut">
+                            </div>
+                            <button type="submit" class="btn btn-primary">submit</button>
+                        </form>
+
+                    </div>
+
+
+                </div>
+                <p>
+                <p>
                 <p></p>
                 <p>
                 </p>
@@ -92,7 +135,8 @@
     </div>
 
     {{!-- Footer --}}
-    {{!-- <hr class="featurette-divider">
+    {{!--
+    <hr class="featurette-divider">
     <footer class="container">
         <p class="float-end"><a href="#">Back to top</a></p>
         <p>© 2020–2021 Home - Away From Home,

@@ -1,6 +1,8 @@
 const express = require("express")
 const router = express.Router()
 const { UserModel } = require('../models/User')
+const  HostModel  = require('../models/host')
+const  ListingsModel  = require('../models/listing')
 const bcrypt = require("bcrypt")
 const session = require('express-session')
 
@@ -22,10 +24,20 @@ router.get("/logout", (req, res) => {
     req.session.destroy()
     res.render("homePage")
 })
-router.get("/explore", (req, res) => {
+
+router.get("/explore", async(req, res) => {
     console.log("HomePage Started")
     if (req.session.isLoggedIn) {
-        res.render("explore")
+        await ListingsModel.find({}, function(err, result) {
+            if (err) {
+              res.send(err);
+            } else {
+            
+            console.log(result)
+            res.render("explore", {result})
+            }
+          }).lean()
+       
     }
     else {
         res.render("customerLogin")
@@ -65,18 +77,19 @@ router.post('/signUp', async (req, res) => {
 router.post('/login', async (req, res) => {
     const { email, password } = req.body
 
-    var users = await UserModel.findOne({ email })
-    if (users == null){
+    var foundUser = await UserModel.findOne({ email })
+    if (foundUser == null){
         res.send("Invalid Crediantials")
     }
-    const isMatching = await bcrypt.compare(password, users.password)
+    const isMatching = await bcrypt.compare(password, foundUser.password)
 
     
-    if (users != null && isMatching == true) {
+    if (foundUser != null && isMatching == true) {
 
         req.session.isLoggedIn = true
+        req.session.user = foundUser
 
-        globalNameData = users
+        
         res.redirect("/explore")
 
     }

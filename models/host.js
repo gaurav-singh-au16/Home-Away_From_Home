@@ -1,13 +1,34 @@
-// const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 
-// const UserSchema = new mongoose.Schema({
+const HostSchema = new mongoose.Schema({
+    
+    name:{
+        type: String,
+        require: true
+    },
+    email:{
+        type : String,
+        required : true
+    },
+    mobile : {
+        type : String,
+        required : true
+    },
+    password:{
+        type: String,
+        required: true
+    },
+    listings : [
+        {type: mongoose.Schema.Types.ObjectId,
+        ref: 'Listing'}
+    ],
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
+})
 
-// // make Schema For Host Here
 
-// const HostModel = mongoose.model('', UserSchema)
+const HostModel = mongoose.model('Host', HostSchema)
 
-
-
-// module.exports = {
-//     HostModel
-// }
+module.exports = HostModel
