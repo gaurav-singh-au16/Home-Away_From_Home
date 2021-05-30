@@ -18,7 +18,7 @@
     <header class="p-2 bg-dark text-white">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                     <img class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"
                         src="./assets/logo.png">
                 </a>
@@ -41,11 +41,11 @@
                     <form action="/hostlogin" method="post">
                         <div class="group">
                             <label for="user" class="label">Email</label>
-                            <input id="user" type="email" class="input" name="email">
+                            <input id="user" type="email" class="input" name="email" required="true">
                         </div>
                         <div class="group">
                             <label for="pass" class="label">Password</label>
-                            <input id="pass" type="password" class="input" data-type="password" name="password">
+                            <input id="pass" type="password" class="input" data-type="password" name="password" required="true">
                         </div>
                         <div class="group">
                             <input id="check" type="checkbox" class="check" checked>
@@ -53,6 +53,7 @@
                         </div>
                         <div class="group">
                             <input type="submit" class="button" value="Sign In">
+                            <h6 class="display-6 text-danger">{{error}}</h6>
                         </div>
                     </form>
 
@@ -65,19 +66,19 @@
                     <div class="sign-up-htm">
                         <div class="group">
                             <label for="user" class="label">Name</label>
-                            <input id="user" type="text" class="input" name="name">
+                            <input id="user" type="text" class="input" name="name" required="true">
                         </div>
                         <div class="group">
                             <label for="pass" class="label">Email</label>
-                            <input id="pass" type="email" class="input" name="email">
+                            <input id="pass" type="email" class="input" name="email" required="true">
                         </div>
                         <div class="group">
                             <label for="pass" class="label">Mobile</label>
-                            <input id="pass" type="tel" class="input" name="mobile">
+                            <input id="pass" type="tel" class="input" name="mobile" required="true">
                         </div>
                         <div class="group">
                             <label for="pass" class="label">Password</label>
-                            <input id="pass" type="password" class="input" name="password">
+                            <input id="pass" type="password" class="input" name="password" required="true">
                         </div>
                         <div class="group">
                             <input type="submit" class="button" value="Sign Up">

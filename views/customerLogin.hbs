@@ -55,33 +55,34 @@
                 <form id="login" tabindex="500" action="/login" method="POST">
                     <h3>Login</h3>
                     <div class="mail">
-                        <input type="mail" name="email">
+                        <input type="mail" name="email" required="true">
                         <label>Email</label>
                     </div>
                     <div class="passwd">
-                        <input type="password" name="password">
+                        <input type="password" name="password" required="true">
                         <label>Password</label>
                     </div>
                     <div class="submit">
                         <button class="dark">Login</button>
+                        <h6 class="display-6 text-danger">{{error}}</h6>
                     </div>
                 </form>
                 <form id="register" tabindex="502" action="/signUp" method="POST">
                     <h3>SignUp</h3>
                     <div class="name">
-                        <input type="text" name="name">
+                        <input type="text" name="name" required="true">
                         <label>Full Name</label>
                     </div>
                     <div class="mail">
-                        <input type="mail" name="email">
+                        <input type="mail" name="email" required="true">
                         <label>Email</label>
                     </div>
                     <div class="uid">
-                        <input type="tel" name="mobile">
+                        <input type="tel" name="mobile" required="true">
                         <label>Mobile Number</label>
                     </div>
                     <div class="passwd">
-                        <input type="password" name="password">
+                        <input type="password" name="password" required="true">
                         <label>Password</label>
                     </div>
                     <div class="submit">
