@@ -1,3 +1,4 @@
+const {mailpassword} = process.env
 const nodemailer = require('nodemailer')
 
 // `Welcome to the family ${name}. Create your own home Away from your home. Let Us help you to give the best expireicne you deserve. `
@@ -10,7 +11,7 @@ function generateMail(info, name, message){
     requireTLS: true,
         auth: {
         user: 'homeawayfromhomeroooms.info@gmail.com',
-        pass: 'Ashish@123'
+        pass: mailpassword
         }
     });
 
