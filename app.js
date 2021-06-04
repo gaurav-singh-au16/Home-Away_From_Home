@@ -19,6 +19,7 @@ const bookNowRoutes = require('./routes/booknow')
 const addNewListingRoutes = require('./routes/addNewListing')
 const paymentRoutes = require('./routes/payement')
 const contactUsRoutes = require('./routes/contactUs')
+const updateExistingRoutes = require('./routes/updateExisting')
 
 // mongoDb Database connect
 
@@ -68,6 +69,7 @@ app.use('', bookNowRoutes)
 app.use('', addNewListingRoutes)
 app.use('', paymentRoutes)
 app.use('', contactUsRoutes)
+app.use('', updateExistingRoutes)
 
 // Port Connect 
 
